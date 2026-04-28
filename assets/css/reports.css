@@ -1,0 +1,58 @@
+/* assets/css/reports.css — Report table & flag styles */
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.report-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.summary-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.summary-label {
+    font-size: 0.85rem;
+    color: var(--gray-800);
+    opacity: 0.8;
+    margin-top: 0.25rem;
+}
+
+.report-table tbody tr.status-overload {
+    background: #fef2f2;
+}
+
+.report-table tbody tr.status-underload {
+    background: #fffbeb;
+}
+
+.report-table tbody tr.status-near_limit {
+    background: #fff7ed;
+}
+
+.text-danger { color: var(--danger); }
+.text-warning { color: var(--warning); }
+.text-success { color: var(--success); }

@@ -1,0 +1,52 @@
+/* assets/css/calendar.css — Availability calendar grid */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background: var(--gray-800);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.calendar-time {
+    background: var(--gray-100);
+    padding: 0.5rem;
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--gray-800);
+}
+
+.calendar-cell {
+    background: white;
+    min-height: 48px;
+    padding: 0.25rem;
+    position: relative;
+}
+
+.calendar-cell.available {
+    background: #d1fae5;
+}
+
+.calendar-cell.preferred {
+    background: #bfdbfe;
+}
+
+.calendar-slot {
+    background: var(--primary);
+    color: white;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+}

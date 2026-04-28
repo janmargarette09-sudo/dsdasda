@@ -1,0 +1,3 @@
+code,name,description,units,lecture_hours,lab_hours,department,semester,year_level
+CS101,Introduction to Programming,Fundamentals of programming using Python,3.0,2.0,1.0,Computer Science,1st,1
+CS102,Data Structures,Arrays linked lists trees graphs,3.0,2.0,1.0,Computer Science,2nd,1

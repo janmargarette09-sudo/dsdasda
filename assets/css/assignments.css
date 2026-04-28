@@ -1,0 +1,93 @@
+/* assets/css/assignments.css — Assignment board (Kanban-style) */
+
+.assignment-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.assignment-column {
+    background: var(--gray-100);
+    border-radius: 8px;
+    padding: 0.75rem;
+    min-height: 200px;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.load-badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.column-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.assignment-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.card-subject {
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.card-time, .card-room {
+    font-size: 0.8rem;
+    color: var(--gray-800);
+    opacity: 0.8;
+}
+
+.empty-slot {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    padding: 1rem;
+    font-style: italic;
+}
+
+.progress-container {
+    margin: 1.5rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: var(--gray-100);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--success));
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+#progress-text {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--gray-800);
+}
