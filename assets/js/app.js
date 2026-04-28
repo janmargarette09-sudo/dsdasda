@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
  * AJAX helper using fetch
  */
 function apiRequest(url, options = {}) {
+    // Prepend base URL for internal API paths when app is in a subdirectory
+    if (typeof window.BASE_URL !== 'undefined' && url.startsWith('/api/')) {
+        url = window.BASE_URL + url;
+    }
+
     const defaults = {
         headers: {
             'X-Requested-With': 'XMLHttpRequest',

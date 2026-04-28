@@ -62,9 +62,5 @@ if ($_POST) {
                 Sign In — TeacherLoad
             </button>
         </form>
-        
-        <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border-light);text-align:center;">
-            <span style="font-size:0.8rem;color:var(--slate-500);">Default: <strong style="color:var(--slate-700);">admin</strong> / <strong style="color:var(--slate-700);">admin123</strong></span>
-        </div>
 </body>
 </html>

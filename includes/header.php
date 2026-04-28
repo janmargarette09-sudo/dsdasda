@@ -28,6 +28,7 @@ $navItems = [
             <link rel="stylesheet" href="<?= BASE_URL . htmlspecialchars($css) ?>">
         <?php endforeach; ?>
     <?php endif; ?>
+    <script>window.BASE_URL = '<?= BASE_URL ?>';</script>
 </head>
 <body>
     <?php $flash = getFlash(); if ($flash): ?>

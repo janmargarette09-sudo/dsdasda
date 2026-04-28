@@ -7,7 +7,7 @@ requireAuth();
 
 $pageTitle = 'Dashboard';
 $extraCss = ['/assets/css/dashboard.css'];
-$extraJs = ['/assets/js/dashboard.js'];
+$extraJs = ['/assets/vendors/chart.js/chart.umd.min.js', '/assets/js/dashboard.js'];
 
 // Fetch stats
 $db = Database::getInstance();

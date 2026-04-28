@@ -147,6 +147,41 @@ body{font-family:var(--font-sans);background:var(--bg-body);color:var(--slate-80
 
 .form-actions{display:flex;align-items:center;gap:0.75rem;margin-top:1rem;padding-top:1.25rem;border-top:2px solid var(--border-light)}
 
+/* ===== Page Header (Breadcrumb) ===== */
+.page-header{margin-bottom:2rem}
+.breadcrumb{font-size:0.8rem;color:var(--gray-500);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap}
+.breadcrumb a{color:var(--gray-500);text-decoration:none;font-weight:500;transition:color 0.2s}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb-sep{color:var(--gray-400)}
+.breadcrumb-current{color:var(--gray-700);font-weight:600}
+.page-heading{margin:0;font-size:1.6rem;font-weight:800;color:var(--gray-900);letter-spacing:-0.03em}
+.page-subheading{margin:0.25rem 0 0;color:var(--gray-500);font-size:0.95rem}
+
+/* ===== Section Icons ===== */
+.section-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.icon-indigo{background:linear-gradient(135deg,#4f46e5,#818cf8)}
+.icon-amber{background:linear-gradient(135deg,#f59e0b,#fbbf24)}
+.icon-teal{background:linear-gradient(135deg,#0d9488,#14b8a6)}
+.icon-green{background:linear-gradient(135deg,#10b981,#34d399)}
+.icon-purple{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
+.icon-rose{background:linear-gradient(135deg,#e11d48,#fb7185)}
+
+/* ===== Section Title ===== */
+.section-title h3{margin:0;font-size:1.05rem;font-weight:700;color:var(--slate-800)}
+.section-title p{margin:0.15rem 0 0;font-size:0.8rem;color:var(--slate-500)}
+
+/* ===== Form Actions Bar ===== */
+.form-actions-bar{display:flex;align-items:center;gap:0.875rem;margin-top:0.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light)}
+
+/* ===== Alert (inline form errors) ===== */
+.alert{padding:1rem 1.25rem;border-radius:var(--radius-md);margin-bottom:1.25rem;font-weight:500;font-size:0.9rem;display:flex;align-items:center;gap:0.625rem;border:1px solid transparent}
+.alert-danger{background:var(--danger-light);color:#991b1b;border-color:#fecaca}
+.alert-warning{background:var(--warning-light);color:#92400e;border-color:#fde68a}
+.alert-success{background:var(--success-light);color:#065f46;border-color:#a7f3d0}
+
+/* ===== Form Grid Override (components.css has max-width:800px) ===== */
+.form-wrapper.wide .form-grid{max-width:none}
+
 /* File Upload */
 .file-drop-zone{border:2px dashed var(--border-medium);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;background:var(--slate-50);transition:all 0.2s;cursor:pointer}
 .file-drop-zone:hover{border-color:var(--primary-500);background:var(--primary-50)}

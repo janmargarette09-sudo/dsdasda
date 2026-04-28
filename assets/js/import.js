@@ -17,10 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = 'Uploading...';
 
         try {
-            // Use relative path since import pages are 2 levels deep (modules/*/import.php)
-            const apiPath = window.location.pathname.includes('/modules/') 
-                ? '../../api/import.php' 
-                : '/api/import.php';
+            // Use BASE_URL when app is served from a subdirectory
+            const apiPath = (typeof window.BASE_URL !== 'undefined' ? window.BASE_URL : '') + '/api/import.php';
             const res = await fetch(apiPath, {
                 method: 'POST',
                 body: formData
