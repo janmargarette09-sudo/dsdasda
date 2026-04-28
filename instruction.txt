@@ -1,0 +1,116 @@
+TeacherLoad is a web-based system for managing teacher load assignments across academic departments. It helps program chairs and administrators:
+
+Track teacher availability, expertise, and current load in real time.
+Manage subjects, schedules, and section offerings per semester.
+Automatically match teachers to classes using a rules-based engine.
+Detect scheduling conflicts and overloads before they happen.
+Generate reports and export data for accreditation and HR.
+The system is role-based. Admin users can manage all settings and user accounts. Chair users can manage teachers, subjects, schedules, assignments, and reports.
+
+Managing Teachers
+Navigate to Teachers in the sidebar to view, add, edit, or import faculty records.
+
+Adding a Teacher
+Click Add Teacher on the Teachers page.
+Fill in the required fields: Employee ID, First Name, Last Name.
+Set Max Units (default 24) and Min Units (default 12) based on employment type.
+Choose Employment Type: full-time, part-time, or contractual.
+Assign a Department for filtering and reporting.
+Save the record. The teacher will appear in the list with a load indicator.
+Importing Teachers
+Use the Import button to upload a CSV file. The file should contain columns: employee_id, first_name, last_name, email, department, max_units, employment_type. A template is available in samples/teachers_template.csv.
+
+Teacher Load Indicator
+Each teacher row shows a colored bar representing current load vs. max units:
+
+Green — Normal load
+Yellow — Near limit (> 85%)
+Red — Overloaded (> 100%)
+Managing Subjects
+Navigate to Subjects to manage the curriculum catalog.
+
+Adding a Subject
+Click Add Subject.
+Enter a unique Subject Code and Name.
+Set Units, Lecture Hours, and Lab Hours.
+Select the target Department, Semester, and Year Level.
+Save. The subject becomes available for scheduling.
+Subject Import
+Upload a CSV with columns: code, name, units, lecture_hours, lab_hours, department, semester, year_level. Use samples/subjects_template.csv as a reference.
+
+Managing Schedules
+Navigate to Schedules to define class time slots.
+
+Creating a Schedule
+Click Add Schedule.
+Select the Subject from the dropdown.
+Pick the Day of Week, Start Time, and End Time.
+Enter the Room and Section (e.g., "BSCS-3A").
+The schedule is saved and becomes available for assignment.
+Schedule Import
+Bulk upload via CSV: subject_code, day_of_week, start_time, end_time, room, section, school_year, semester. See samples/schedules_template.csv.
+
+Tip: Ensure the room and time slot do not conflict with existing schedules to avoid assignment errors.
+Load Assignments
+Navigate to Assignments to assign teachers to schedule slots.
+
+Auto-Assignment
+Click Auto-Assign from the Assignments page or Quick Actions.
+The matching engine evaluates teacher expertise, availability, and current load.
+Review the proposed assignments in the preview table.
+Click Confirm to finalize. Assignments are created with status pending by default.
+Manual Override
+For exceptions or special cases:
+
+Go to Assignments → Manual Override.
+Select the teacher and schedule from the dropdowns.
+Provide a Rationale explaining the override.
+Save. The assignment is marked as manual with your notes.
+Conflict Detection
+The system automatically flags:
+
+Time conflicts — teacher double-booked
+Overload — exceeds max units
+Room conflicts — two classes in same room/time
+Resolve conflicts by reassigning or editing schedules.
+
+Reports & Export
+Navigate to Reports to generate load summaries and export data.
+
+Load Report
+The default report shows every teacher's current load, categorized as:
+
+Normal — within min/max range
+Underload — below minimum
+Overload — exceeds maximum
+Filter by department using the dropdown, then export to CSV or PDF.
+
+Audit Log
+The Audit Log records all major actions (logins, assignments, imports) with timestamps and IP addresses for accountability.
+
+Tip: Use the CSV export for further analysis in Excel or for submitting to the registrar.
+Quick Start Guide
+New semester? Follow these steps:
+
+Update Preferences — Go to Settings and set the current School Year and Semester.
+Import or Add Teachers — Ensure all faculty are in the system with correct max units.
+Import or Add Subjects — Define the curriculum for the semester.
+Create Schedules — Map out all section time slots.
+Auto-Assign — Run the matching engine to generate initial assignments.
+Review & Override — Check overloads and manually adjust as needed.
+Generate Report — Export the final load report for HR / accreditation.
+Frequently Asked Questions
+Can I change a teacher's max units after assignments are made?
+Yes. Edit the teacher record; the system will recalculate load and flag any new overloads in the dashboard.
+
+What happens if I delete a schedule?
+All linked assignments are removed automatically (cascade delete). The affected teachers' loads will decrease accordingly.
+
+Can part-time teachers have different load limits?
+Yes. Set a custom Max Units when creating or editing a teacher. Part-time faculty often use 12 or 15 units.
+
+How do I reset my password?
+Go to Settings → Change Password. If you are an admin, you can also reset passwords for other users in the User Management table.
+
+Who can access the system?
+Only authenticated users with roles admin or chair. Inactive accounts cannot log in.
